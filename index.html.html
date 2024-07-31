@@ -1,0 +1,232 @@
+Claro! Aqui está a versão completa com todas as 10 questões adicionadas: ```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulado DevOps</title>
+    <style>
+      .correct {
+        color: green;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simulado DevOps</h1>
+    <div id="question-container">
+      <!-- Questões serão inseridas aqui pelo JavaScript -->
+    </div>
+    <button id="next-button" class="hidden">Próxima Questão</button>
+
+    <script>
+      const questions = [
+        {
+          question:
+            "Nos primórdios da TI, um muro alto separava desenvolvimento e operações. Para tentar resolver esse problema, surgiu o(a):",
+          options: [
+            "A) Programação Orientada a objetos",
+            "B) Programação estruturada",
+            "C) Comunicação entre pares",
+            "D) Desenvolvimento ágil",
+            "E) Persistência de dados",
+          ],
+          correctAnswer: 3,
+          userAnswer: null,
+        },
+        {
+          question:
+            "Controle de versão é uma ferramenta que registra todas as alterações feitas em um arquivo ou conjunto de arquivos ao longo do tempo. Para resolver esse problema, qual foi a primeira solução desenvolvida?",
+          options: [
+            "A) Controladores de objetos",
+            "B) Sistemas Centralizados de Controle de Versão (CVCSs)",
+            "C) Centralizadores universais",
+            "D) Sistemas Distribuídos de Controle de Versão (DVCS)",
+            "E) Sistemas de Controle de Versões distribuídas",
+          ],
+          correctAnswer: 1,
+          userAnswer: null,
+        },
+        {
+          question:
+            "Relacione corretamente os comandos do Git: Commits, Merge, Criação de Branch, Pull Requests, Push",
+          options: [
+            "A) 2 – 1 – 5 – 3 – 4",
+            "B) 1 – 4 – 5 – 3 – 2",
+            "C) 1 – 4 – 2 – 5 – 3",
+            "D) 4 – 3 – 5 – 2 – 1",
+            "E) 1 – 4 – 2 – 3 – 5",
+          ],
+          correctAnswer: 1,
+          userAnswer: null,
+        },
+        {
+          question:
+            "Existe uma estrutura que avalia a capacidade de uma empresa adotar processos de DevOps, bem como uma maneira de medir o sucesso durante uma transformação de DevOps. Essa estrutura é conhecida como:",
+          options: [
+            "A) Orientação a objetos",
+            "B) SGBD",
+            "C) RDBMS",
+            "D) NOSQL",
+            "E) CALMS",
+          ],
+          correctAnswer: 4,
+          userAnswer: null,
+        },
+        {
+          question:
+            "Relacione corretamente as métricas na medição da qualidade em DevOps: Tempo de ciclo, Defect Rate, Tempo de recuperação, Taxa de entrega, Qualidade do código",
+          options: [
+            "A) 2 – 1 – 5 – 3 – 4",
+            "B) 4 – 2 – 3 – 5 – 1",
+            "C) 1 – 4 – 2 – 5 – 3",
+            "D) 4 – 3 – 2 – 5 – 1",
+            "E) 4 – 1 – 2 – 5 – 3",
+          ],
+          correctAnswer: 3,
+          userAnswer: null,
+        },
+        {
+          question:
+            "Para a implementação bem-sucedida de DevOps e alcançar a excelência operacional e a satisfação do cliente, é preciso ter os seguintes itens assegurados:",
+          options: [
+            "A) Gerência austera, liderança individual e alto investimento",
+            "B) Envolvimento da gerência, investimento e austeridade",
+            "C) Automação, colaboração e cultura organizacional",
+            "D) Austeridade, tradicionalismo e conservadorismo",
+            "E) Visão direcional, individualismo e persistência",
+          ],
+          correctAnswer: 2,
+          userAnswer: null,
+        },
+        {
+          question: "São corretas apenas as afirmativas sobre CVCSs:",
+          options: [
+            "A) I e II",
+            "B) I, II e V",
+            "C) I, II e IV",
+            "D) I, III e V",
+            "E) III e IV",
+          ],
+          correctAnswer: 1,
+          userAnswer: null,
+        },
+        {
+          question:
+            "Relacione corretamente algumas das ferramentas utilizadas no DevOps: Composer, Chef, Vagrant, Docker, Puppet",
+          options: [
+            "A) 1 – 2 – 4 – 3 – 5",
+            "B) 3 – 5 – 4 – 1 – 2",
+            "C) 4 – 2 – 3 – 5 – 1",
+            "D) 4 – 2 – 5 – 3 – 1",
+            "E) 2– 3 – 5 – 1 – 4",
+          ],
+          correctAnswer: 3,
+          userAnswer: null,
+        },
+        {
+          question:
+            "Essa infraestrutura de gerenciamento de configurações é a:",
+          options: [
+            "A) Gerenciamento automático de backup",
+            "B) Sistemas Centralizados de Controle de cópias",
+            "C) Centralizadores de Infraestrutura de backup",
+            "D) Infraestrutura como Código (IaC)",
+            "E) Sistemas de Controle de Backup",
+          ],
+          correctAnswer: 3,
+          userAnswer: null,
+        },
+        {
+          question:
+            "Essa representação visual e automatizada do fluxo de trabalho do desenvolvimento de software é conhecida como:",
+          options: [
+            "A) Integração Contínua",
+            "B) Automatização de processos",
+            "C) Implementação automática",
+            "D) Entrega Contínua",
+            "E) Pipeline",
+          ],
+          correctAnswer: 4,
+          userAnswer: null,
+        },
+      ];
+
+      let currentQuestionIndex = 0;
+
+      const questionContainer = document.getElementById("question-container");
+      const nextButton = document.getElementById("next-button");
+
+      function showQuestion(questionIndex) {
+        const questionData = questions[questionIndex];
+        questionContainer.innerHTML = `
+                <p>${questionData.question}</p>
+                ${questionData.options
+                  .map(
+                    (option, index) => `
+                    <div>
+                        <input type="radio" name="option" id="option${index}" value="${index}">
+                        <label for="option${index}">${option}</label>
+                    </div>
+                `
+                  )
+                  .join("")}
+                <button onclick="checkAnswer()">Responder</button>
+            `;
+      }
+
+      function checkAnswer() {
+        const selectedOption = document.querySelector(
+          'input[name="option"]:checked'
+        );
+        if (!selectedOption) {
+          alert("Por favor, selecione uma opção.");
+          return;
+        }
+
+        const selectedValue = parseInt(selectedOption.value);
+        const currentQuestion = questions[currentQuestionIndex];
+
+        currentQuestion.userAnswer = selectedValue;
+
+        if (selectedValue === currentQuestion.correctAnswer) {
+          alert("Você acertou!");
+        } else {
+          alert(
+            `Você errou! A resposta correta é: ${
+              currentQuestion.options[currentQuestion.correctAnswer]
+            }`
+          );
+          document
+            .querySelector(
+              `label[for="option${currentQuestion.correctAnswer}"]`
+            )
+            .classList.add("correct");
+        }
+
+        nextButton.classList.remove("hidden");
+      }
+
+      function nextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+          showQuestion(currentQuestionIndex);
+          nextButton.classList.add("hidden");
+        } else {
+          questionContainer.innerHTML = "<p>Você completou o simulado!</p>";
+          nextButton.classList.add("hidden");
+        }
+      }
+
+      nextButton.addEventListener("click", nextQuestion);
+
+      showQuestion(currentQuestionIndex);
+    </script>
+  </body>
+</html>
+``` Este código agora inclui todas as 10 questões do simulado. Cada questão será
+exibida uma de cada vez, e ao responder, se a resposta estiver incorreta, a
+resposta correta será destacada em verde. O botão "Próxima Questão" permite
+avançar para a próxima pergunta.

@@ -1,0 +1,364 @@
+Claro! Aqui está a versão completa com todas as 10 questões adicionadas: ```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulado DevOps</title>
+    <style>
+      .correct {
+        color: green;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simulado DevOps</h1>
+    <div id="question-container">
+      <!-- Questões serão inseridas aqui pelo JavaScript -->
+    </div>
+    <button id="next-button" class="hidden">Próxima Questão</button>
+
+    <script>
+      const questions = [
+        {
+          question:
+            "Os contêineres têm revolucionado a maneira como desenvolvemos, distribuímos e executamos aplicativos. Nesse contexto, o Docker se destaca como uma das principais ferramentas para facilitar a criação e gerenciamento desses ambientes isolados. Uma imagem do Docker consiste em sistemas de arquivos sobrepostos, sendo a base um sistema de arquivos de inicialização, chamado bootfs, semelhante ao típico sistema de arquivos de inicialização do Linux/Unix. Cada um desses sistemas de arquivos no Docker é chamado de imagem, e essas imagens podem ser sobrepostas umas sobre as outras. A imagem mais abaixo é chamada de imagem pai, e você pode percorrer cada camada até chegar à imagem base na parte inferior da pilha. Ao lançar um contêiner a partir de uma imagem, o Docker monta um sistema de arquivos de leitura-escrita sobre quaisquer camadas subjacentes. Este sistema de arquivos de leitura-escrita é onde os processos desejados para o contêiner Docker serão executados. Analise as afirmativas a seguir que trazem comandos com parâmetros para manipular contêineres do Docker:\n\nLista todos os contêineres: docker ps -a\nAltera o endereço contêiner: docker rename [contêiner] [novo_nome]\nExecuta o contêiner fornecido: docker start [contêiner]\nPara a utilização do SO: docker stop [contêiner]\nEspera até que outros contêineres em execução sejam interrompidos: docker wait [contêiner]\n\nSão corretas apenas as afirmativas:",
+          options: [
+            "A) I e II",
+            "B) II e V",
+            "C) I, III e V",
+            "D) I, II e IV",
+            "E) I, III e IV",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          question:
+            "YAML é uma linguagem de marcação humanamente legível que é frequentemente usada para descrever configurações e dados. É uma linguagem de sintaxe simples e fácil de aprender, mas existem algumas regras básicas que você deve seguir ao criar arquivos YAML.\n\nRelacione corretamente os componentes básicos de YAML que são comuns as várias linguagens de programação encontradas no mercado:\n\nListas\nMapas\nNumber\nStrings\nBoolean\n\n(      ) São usados para armazenar dados associativos, como chaves e valores\n(      ) São usadas para armazenar uma sequência de dados\n(      ) São usadas para armazenar dados de texto\n(      ) São usados para armazenar dados numéricos\n(      ) São usados para armazenar dados lógicos, como verdadeiro ou falso\n\nAgora, selecione a alternativa que apresenta a sequência correta:",
+          options: [
+            "A) 2 – 4 – 5 – 3 – 1",
+            "B) 3 – 2 – 5 – 1 – 4",
+            "C) 2 – 1 – 4 – 3 – 5",
+            "D) 5 – 2 – 4 – 3 – 1",
+            "E) 2 – 1 – 5 – 3 – 4",
+          ],
+          correctAnswer: 2,
+        },
+
+        {
+          question:
+            "No ambiente de containers é recomendável ter um orquestrador que simplifica o desenvolvimento e a administração de aplicações. Sem um orquestrador, gerenciar um conjunto de containers pode ser desafiador, exigindo a administração manual de execução, dimensionamento e escalabilidade. Existe um orquestrador que automatiza essas tarefas, gerenciando de maneira eficiente clusters com várias máquinas, destacando-se por sua arquitetura robusta. Sua estrutura compreende dois componentes principais: o Mestre, responsável por gerenciar o cluster e manter seu estado desejado, e os Nós (ou trabalhadores), responsáveis pela execução das aplicações.\n\nEsse orquestrador de containers é o:",
+          options: [
+            "A) YAML",
+            "B) Docker Engine",
+            "C) Deployment",
+            "D) Kubernetes",
+            "E) Orchestrator",
+          ],
+          correctAnswer: 3,
+        },
+
+        {
+          question:
+            "Microsoft Azure é uma plataforma de nuvem abrangente, oferecendo uma ampla variedade de serviços para atender às diversas necessidades de desenvolvimento, hospedagem e gerenciamento de aplicativos em nuvem. Seja para infraestrutura, soluções avançadas de inteligência artificial ou armazenamento de dados, o Azure fornece uma base sólida para empresas de todos os tamanhos e setores.\n\nO Azure também se destaca em soluções para contêineres, que proporciona um ambiente gerenciado para implantação, gerenciamento e dimensionamento de contêineres.\n\nEsse serviço é o:",
+          options: [
+            "A) Azure Blob Storage",
+            "B) Azure SQL Database",
+            "C) Azure Cognitive Services",
+            "D) Azure DevOps",
+            "E) Azure Kubernetes Service",
+          ],
+          correctAnswer: 4,
+        },
+
+        {
+          question:
+            "A busca por confiabilidade e continuidade em ambientes DevOps é crucial para garantir estabilidade e entrega consistente de software. No contexto da confiabilidade, a atenção recai sobre monitoramento proativo, automação de testes, resiliência e feedback rápido, visando identificar e corrigir potenciais problemas antes que impactem os usuários. A continuidade em DevOps, por sua vez, concentra-se na integração e implantação contínuas, rollbacks eficientes, backup e recuperação, além da orquestração de contêineres. A integração contínua assegura a validação contínua do código, enquanto a implantação contínua automatiza a entrega de novas funcionalidades.\n\nUm elemento no contorno de problemas tem o potencial de causar impactos significativos durante as próximas atualizações, uma vez que o sistema modificado individualmente pode não ser reconhecido.\n\nEsse elemento é o(a):",
+          options: [
+            "A) Infraestrutura como Código",
+            "B) Riscos de disponibilidade",
+            "C) Riscos de desempenho",
+            "D) Desvio de configuração",
+            "E) Alterações manuais",
+          ],
+          correctAnswer: 3,
+        },
+        {
+          question:
+            "Na dinâmica e complexa paisagem tecnológica atual, em que a infraestrutura digital desempenha um papel crucial em operações empresariais, a análise e gestão de riscos tornam-se imperativas. Ferramentas especializadas emergem como aliadas essenciais, permitindo às organizações a identificação, avaliação e mitigação de potenciais ameaças à segurança e à estabilidade operacional. Dentro desse contexto, o Terraform, uma ferramenta de Infraestrutura como Código (IaC), destaca-se como uma peça fundamental.\n\nAlém de sua capacidade intrínseca de orquestrar ambientes de nuvem, o Terraform contribui significativamente para a gestão proativa de riscos. Dentre essas ações que contribuem para a gestão de riscos e que gerencia interrupções de serviço, falhas de hardware, falhas de software temos o:",
+          options: [
+            "A) Gerenciamento de mudanças",
+            "B) Riscos de disponibilidade",
+            "C) Riscos de desempenho",
+            "D) Resposta a incidentes",
+            "E) Riscos de custo",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          question:
+            "Na infraestrutura de TI existem ambientes completamente isolados e independentes, criados para emular a funcionalidade de uma máquina física. Esse ambiente permite a execução de vários sistemas operacionais e aplicativos em um único hardware físico. Esse conceito é fundamental para a eficiência na gestão de recursos de computação e para a criação de ambientes de teste, desenvolvimento e produção mais flexíveis. Sua principal característica é a capacidade de executar um sistema operacional completo dentro de outro, chamado de sistema hospedeiro.\n\nEssa abstração é possibilitada por um software conhecido como hipervisor. Esse ambiente é conhecido como:",
+          options: [
+            "A) Servidor de Rede",
+            "B) Emulador de Servidor",
+            "C) Máquinas Virtuais (VM)",
+            "D) Hipervisor Master",
+            "E) Roteador",
+          ],
+          correctAnswer: 2,
+        },
+
+        {
+          question:
+            "Os Grupos de Dimensionamento Automático (ASGs) da AWS representam uma solução eficaz para a rápida gestão e escalabilidade de um conjunto homogêneo de instâncias do EC2, compartilhando a mesma configuração. Desenvolvidos para ajustar automaticamente o número de instâncias em resposta a alterações na demanda ou conforme políticas predefinidas, os ASGs asseguram a manutenção constante do número desejado de instâncias em operação. Essa automação é fundamental para preservar a disponibilidade de aplicativos e lidar de maneira eficiente com flutuações nas cargas de trabalho.\n\nEsses grupos de dimensionamento automáticos são conhecidos como:",
+          options: [
+            "A) Azure Blob Storage",
+            "B) Azure SQL Database",
+            "C) Azure Cognitive Services",
+            "D) Auto Scaling",
+            "E) Azure Kubernetes Service",
+          ],
+          correctAnswer: 3,
+        },
+        {
+          question:
+            "Segurança em DevOps aprofunda-se na abordagem integrada para garantir a segurança ao longo de todo o ciclo de vida do desenvolvimento e operações de software. Ele explora os fundamentos da Integração Contínua de Segurança, delineando como a automação de testes de segurança, análises estáticas e dinâmicas, e revisões de código são essenciais para a detecção precoce e a mitigação de vulnerabilidades.\n\nPara identificar atividades suspeitas ou anomalias de segurança em tempo real, incluindo a análise de logs, métricas de segurança e a adoção de soluções de monitoramento avançadas, temos o:",
+          options: [
+            "A) Ciclo de vida seguro",
+            "B) Implementação segura",
+            "C) Gestão de Identidade e Acesso",
+            "D) Resposta rápida a incidentes",
+            "E) Monitoramento contínuo",
+          ],
+          correctAnswer: 4,
+        },
+        {
+          question:
+            "O cenário de DevOps continua a evoluir em resposta às demandas crescentes por agilidade, automação e colaboração contínua entre equipes de desenvolvimento e operações. Algumas tendências emergentes delineiam o futuro do DevOps, destacando áreas de foco que moldarão a forma como as organizações concebem, implementam e gerenciam seus processos de desenvolvimento e operações. Analise as afirmativas a seguir que tratam da evolução do cenário de DevOps:\n\nGitOps e Infraestrutura como Código (IaC) estão em desuso\nDevSecOps e Segurança Integrada ganham destaque como a integração da segurança em todo o ciclo de vida do desenvolvimento\nObservabilidade e Monitoramento Contínuo desaceleram, com organizações deixando de utilizar ferramentas avançadas de monitoramento e análise de logs\nContinuous Testing e Testes Autônomos evoluem, mas os testes autônomos que utilizam automação avançada e inteligência artificial são abandonados por desconhecimento técnico dos desenvolvedores\nAutomatização Cognitiva e IA tornam-se fundamentais, impulsionando a automação com inteligência artificial (IA) e aprendizado de máquina (ML)\n\nSão corretas apenas as afirmativas:",
+          options: [
+            "A) I e II",
+            "B) I, III e V",
+            "C) I, II e IV",
+            "D) II e V",
+            "E) I, III e IV",
+          ],
+          correctAnswer: 3,
+        },
+
+        {
+          question:
+            "As arquiteturas representam uma revolução no paradigma de desenvolvimento de software, introduzindo uma abordagem que elimina a necessidade de gerenciamento direto de servidores por parte dos desenvolvedores. Contrariando o modelo convencional, no qual os recursos são provisionados de forma contínua, o serverless adota uma perspectiva onde a infraestrutura é completamente gerenciada pelos provedores de nuvem. Existe um componente essencial das arquiteturas serverless, proporcionando uma abordagem inovadora para o desenvolvimento e execução de código na nuvem. Nesse modelo, os desenvolvedores dividem suas aplicações em funções independentes e granulares, que são acionadas em resposta a eventos específicos, sem a necessidade de gerenciar a infraestrutura subjacente.\n\nEsse componente é conhecido como:",
+          options: [
+            "A) FaaS (Function-as-a-Service)",
+            "B) Serverless",
+            "C) PaaS (Platform-as-a-Service)",
+            "D) Auto Scaling Service",
+            "E) Aplicações RESTful",
+          ],
+          correctAnswer: 0,
+        },
+        {
+          question:
+            "A segurança em código tornou-se uma prioridade essencial em ambientes de nuvem, especialmente ao utilizar serviços da Amazon Web Services (AWS) em conjunto com ferramentas como o Terraform. Essa abordagem, também conhecida como Infrastructure as Code (IaC), não apenas permite a automação eficiente da infraestrutura, mas também impulsiona a implementação de práticas seguras desde a concepção até a operação. Analise as afirmativas a seguir que trazem como a segurança pode ser integrada efetivamente ao código ao utilizar AWS e Terraform:\n\nGerenciamento de credenciais: primeiro passo é assegurar o gerenciamento seguro de credenciais na AWS\nPráticas de segurança em Terraform: variáveis sensíveis e arquivos de estado, avaliação de impacto e revisão de código\nMonitoramento e conformidade: implementar identificação da linguagem de programação para identificar e reagir a possíveis atualizações\nAuditorias e revisões regulares: realizar auditorias regulares nas configurações do Terraform e nos recursos provisionados na AWS para identificar e corrigir potenciais lacunas de segurança\nAtualizações e Patches automáticos: automatizar a instalação dos recursos financeiros do projeto\n\nSão corretas apenas as afirmativas:",
+          options: [
+            "A) I, II e IV",
+            "B) I e II",
+            "C) I, III e V",
+            "D) II e V",
+            "E) I, III e IV",
+          ],
+          correctAnswer: 0,
+        },
+        {
+          question:
+            "A Amazon Web Services (AWS) destaca-se como uma líder global no campo dos serviços de nuvem, fornecendo uma ampla gama de recursos para atender às diversas necessidades de computação em nuvem de organizações em todo o mundo. A infraestrutura oferecida pela AWS é conhecida por sua escalabilidade, confiabilidade e segurança, proporcionando um ambiente propício para a inovação e crescimento eficiente de empresas de todos os portes.\n\nA AWS tem um serviço que é essencial para hospedar aplicativos e máquinas virtuais, oferecendo capacidade computacional escalável na nuvem.\n\nEsse serviço é o:",
+          options: [
+            "A) AWS Lambda",
+            "B) Amazon EC2 (Elastic Compute Cloud)",
+            "C) Amazon VPC (Virtual Private Cloud)",
+            "D) Amazon DynamoDB",
+            "E) Amazon SNS (Simple Notification Service)",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          question:
+            "No cenário dinâmico e ágil da implementação DevOps, em que a colaboração eficiente e a entrega contínuas são fundamentais, a gestão eficaz de acessos e permissões se torna uma prioridade crítica. Autenticação e autorização emergem como pilares essenciais para garantir a segurança e o controle adequado sobre os recursos de tecnologia da informação. A autenticação refere-se à verificação da identidade dos usuários e sistemas que interagem com a infraestrutura, enquanto a autorização se concentra na concessão adequada de permissões e privilégios para executar ações específicas. Existe uma abordagem que integra a segurança no processo de DevOps. Isso significa que a segurança é considerada em todas as etapas do desenvolvimento e implantação de software, desde o planejamento até a operação.\n\nEssa abordagem é conhecida como:",
+          options: [
+            "A) DevSecOps",
+            "B) CloudWatch",
+            "C) OSS",
+            "D) SAST",
+            "E) SCA",
+          ],
+          correctAnswer: 0,
+        },
+
+        {
+          question:
+            "Na dinâmica e complexa paisagem tecnológica atual, em que a infraestrutura digital desempenha um papel crucial em operações empresariais, a análise e gestão de riscos tornam-se imperativas. Ferramentas especializadas emergem como aliadas essenciais, permitindo às organizações a identificação, avaliação e mitigação de potenciais ameaças à segurança e à estabilidade operacional. A gestão de riscos é o processo de monitoramento e gerenciamento dos riscos identificados. O Terraform, que é uma ferramenta de Infraestrutura como Código (IaC), destaca-se como uma peça fundamental. Além de sua capacidade intrínseca de orquestrar ambientes de nuvem, o Terraform contribui significativamente para a gestão proativa de riscos, podendo ser usado para ajudar na gestão de riscos de infraestrutura de várias maneiras.\n\nRelacione corretamente as maneiras do Terraform pode ser usado para a gestão de riscos de infraestrutura:\n\nRiscos de segurança\nGerenciamento de mudanças\nRiscos de disponibilidade\nResposta a incidentes\nMonitoramento de riscos\n\n(      ) Capacidade de gerenciar alterações na infraestrutura, ajudando a garantir que essas alterações não aumentem os riscos\n(      ) Característica para responder a problemas de segurança, incluindo situações como o uso de ferramentas de resposta a incidentes, a implementação de planos de recuperação de desastres e a comunicação com as partes interessadas\n(      ) Pode ser utilizado para acompanhar os riscos identificados, incluindo coisas como o uso de ferramentas de monitoramento, a execução de auditorias e a realização de exercícios de resposta a incidentes\n(      ) Riscos que identificam interrupções de serviço, falhas de hardware, falhas de software\n(      ) Identificação de vulnerabilidades de segurança, acessos não autorizados e comprometimento de dados\n\nAgora, selecione a alternativa que apresenta a sequência correta:",
+          options: [
+            "A) 2 – 4 – 5 – 3 – 1",
+            "B) 5 – 2 – 3 – 1 – 4",
+            "C) 2 – 4 – 1 – 3 – 5",
+            "D) 5 – 2 – 4 – 1 – 3",
+            "E) 2 – 4 – 3 – 5 – 1",
+          ],
+          correctAnswer: 4,
+        },
+        {
+          question:
+            "No ambiente de containers é recomendável ter um orquestrador que simplifica o desenvolvimento e a administração de aplicações. Sem um orquestrador, gerenciar um conjunto de containers pode ser desafiador, exigindo a administração manual de execução, dimensionamento e escalabilidade. Existe um orquestrador que automatiza essas tarefas, gerenciando de maneira eficiente clusters com várias máquinas, destacando-se por sua arquitetura robusta. Sua estrutura compreende dois componentes principais: o Mestre, responsável por gerenciar o cluster e manter seu estado desejado, e os Nós (ou trabalhadores), responsáveis pela execução das aplicações.\n\nEsse orquestrador de containers é o:",
+          options: [
+            "A) YAML",
+            "B) Docker Engine",
+            "C) Deployment",
+            "D) Kubernetes",
+            "E) Orchestrator",
+          ],
+          correctAnswer: 3,
+        },
+
+        {
+          question:
+            "Os Grupos de Dimensionamento Automático (ASGs) da AWS representam uma solução eficaz para a rápida gestão e escalabilidade de um conjunto homogêneo de instâncias do EC2, compartilhando a mesma configuração. Desenvolvidos para ajustar automaticamente o número de instâncias em resposta a alterações na demanda ou conforme políticas predefinidas, os ASGs asseguram a manutenção constante do número desejado de instâncias em operação. Essa automação é fundamental para preservar a disponibilidade de aplicativos e lidar de maneira eficiente com flutuações nas cargas de trabalho.\n\nEsses grupos de dimensionamento automáticos são conhecidos como:",
+          options: [
+            "A) Azure Blob Storage",
+            "B) Azure SQL Database",
+            "C) Azure Cognitive Services",
+            "D) Auto Scaling",
+            "E) Azure Kubernetes Service",
+          ],
+          correctAnswer: 3,
+        },
+        {
+          question:
+            "Na área de desenvolvimento pode contar com ambientes leves e isolados que permitem encapsular uma aplicação e suas dependências. Eles proporcionam consistência entre diferentes ambientes de desenvolvimento, teste e produção, eliminando as divergências que podem surgir devido a diferenças nos sistemas operacionais ou configurações.\n\nEssa representação de um ambiente isolado para o código, caracterizado pela ausência de conhecimento sobre o sistema operacional ou os arquivos do host é um:",
+          options: [
+            "A) GitHub",
+            "B) Servidor de Rede Distribuída",
+            "C) Máquinas Virtuais (VM)",
+            "D) Emulador de Desktop",
+            "E) Container",
+          ],
+          correctAnswer: 4,
+        },
+
+        {
+          question:
+            "Segurança em DevOps aprofunda-se na abordagem integrada para garantir a segurança ao longo de todo o ciclo de vida do desenvolvimento e operações de software. Ele explora os fundamentos da Integração Contínua de Segurança, delineando como a automação de testes de segurança, análises estáticas e dinâmicas, e revisões de código são essenciais para a detecção precoce e a mitigação de vulnerabilidades.\n\nRelacione corretamente as características de segurança implementada em projetos DevOps:\n\nResposta rápida a incidentes\nMonitoramento contínuo\nTestes automatizados\nGestão de Identidade e Acesso (IAM)\nImplementação segura\n\n(      ) Configuração adequada de ambientes e a adoção de boas práticas de segurança para proteger a infraestrutura em nuvem\n(      ) Característica crucial para identificar atividades suspeitas ou anomalias de segurança em tempo real, análise de logs, métricas de segurança e a adoção de soluções de monitoramento avançadas\n(      ) Princípios de menor privilégio, autenticação multifatorial e monitoramento de acessos são implementados para evitar acessos não autorizados\n(      ) Protocolos de resposta a incidentes são estabelecidos, garantindo uma ação rápida e eficiente em caso de violações de segurança\n(      ) Com ciclos de entrega mais curtos, a realização manual de todos os testes necessários torna-se praticamente inviável, obrigando a implantação de ações automáticas e destacando a importância dessa característica no contexto do DevOps\n\nAgora, selecione a alternativa que apresenta a sequência correta:",
+          options: [
+            "A) 2 – 4 – 5 – 3 – 1",
+            "B) 5 – 2 – 3 – 1 – 4",
+            "C) 2 – 1 – 4 – 3 – 5",
+            "D) 5 – 2 – 4 – 1 – 3",
+            "E) 5 – 1 – 3 – 2 – 4",
+          ],
+          correctAnswer: 3,
+        },
+        {
+          question:
+            "Microsoft Azure é uma plataforma de nuvem abrangente, oferecendo uma ampla variedade de serviços para atender às diversas necessidades de desenvolvimento, hospedagem e gerenciamento de aplicativos em nuvem. Seja para infraestrutura, soluções avançadas de inteligência artificial ou armazenamento de dados, o Azure fornece uma base sólida para empresas de todos os tamanhos e setores.\n\nO Azure também se destaca em soluções para contêineres, que proporciona um ambiente gerenciado para implantação, gerenciamento e dimensionamento de contêineres.\n\nEsse serviço é o:",
+          options: [
+            "A) Azure Blob Storage",
+            "B) Azure SQL Database",
+            "C) Azure Cognitive Services",
+            "D) Azure DevOps",
+            "E) Azure Kubernetes Service",
+          ],
+          correctAnswer: 4,
+        },
+
+        {
+          question:
+            "Os contêineres têm revolucionado a maneira como desenvolvemos, distribuímos e executamos aplicativos. Nesse contexto, o Docker se destaca como uma das principais ferramentas para facilitar a criação e gerenciamento desses ambientes isolados. Uma imagem do Docker consiste em sistemas de arquivos sobrepostos, sendo a base um sistema de arquivos de inicialização, chamado bootfs, semelhante ao típico sistema de arquivos de inicialização do Linux/Unix. Cada um desses sistemas de arquivos no Docker é chamado de imagem, e essas imagens podem ser sobrepostas umas sobre as outras. A imagem mais abaixo é chamada de imagem pai, e você pode percorrer cada camada até chegar à imagem base na parte inferior da pilha. Ao lançar um contêiner a partir de uma imagem, o Docker monta um sistema de arquivos de leitura-escrita sobre quaisquer camadas subjacentes. Este sistema de arquivos de leitura-escrita é onde os processos desejados para o contêiner Docker serão executados. Analise as afirmativas a seguir que trazem comandos com parâmetros para manipular contêineres do Docker:\n\nLista todos os contêineres: docker ps -a\nAltera o endereço contêiner: docker rename [contêiner] [novo_nome]\nExecuta o contêiner fornecido: docker start [contêiner]\nPara a utilização do SO: docker stop [contêiner]\nEspera até que outros contêineres em execução sejam interrompidos: docker wait [contêiner]\n\nSão corretas apenas as afirmativas:",
+          options: [
+            "A) I e II",
+            "B) II e V",
+            "C) I, III e V",
+            "D) I, II e IV",
+            "E) I, III e IV",
+          ],
+          correctAnswer: 2,
+        },
+      ];
+
+      let currentQuestionIndex = 0;
+
+      const questionContainer = document.getElementById("question-container");
+      const nextButton = document.getElementById("next-button");
+
+      function showQuestion(questionIndex) {
+        const questionData = questions[questionIndex];
+        questionContainer.innerHTML = `
+                <p>${questionData.question}</p>
+                ${questionData.options
+                  .map(
+                    (option, index) => `
+                    <div>
+                        <input type="radio" name="option" id="option${index}" value="${index}">
+                        <label for="option${index}">${option}</label>
+                    </div>
+                `
+                  )
+                  .join("")}
+                <button onclick="checkAnswer()">Responder</button>
+            `;
+      }
+
+      function checkAnswer() {
+        const selectedOption = document.querySelector(
+          'input[name="option"]:checked'
+        );
+        if (!selectedOption) {
+          alert("Por favor, selecione uma opção.");
+          return;
+        }
+
+        const selectedValue = parseInt(selectedOption.value);
+        const currentQuestion = questions[currentQuestionIndex];
+
+        currentQuestion.userAnswer = selectedValue;
+
+        if (selectedValue === currentQuestion.correctAnswer) {
+          alert("Você acertou!");
+        } else {
+          alert(
+            `Você errou! A resposta correta é: ${
+              currentQuestion.options[currentQuestion.correctAnswer]
+            }`
+          );
+          document
+            .querySelector(
+              `label[for="option${currentQuestion.correctAnswer}"]`
+            )
+            .classList.add("correct");
+        }
+
+        nextButton.classList.remove("hidden");
+      }
+
+      function nextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+          showQuestion(currentQuestionIndex);
+          nextButton.classList.add("hidden");
+        } else {
+          questionContainer.innerHTML = "<p>Você completou o simulado!</p>";
+          nextButton.classList.add("hidden");
+        }
+      }
+
+      nextButton.addEventListener("click", nextQuestion);
+
+      showQuestion(currentQuestionIndex);
+    </script>
+  </body>
+</html>
+``` Este código agora inclui todas as 10 questões do simulado. Cada questão será
+exibida uma de cada vez, e ao responder, se a resposta estiver incorreta, a
+resposta correta será destacada em verde. O botão "Próxima Questão" permite
+avançar para a próxima pergunta.

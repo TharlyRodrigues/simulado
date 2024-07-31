@@ -1,0 +1,239 @@
+Claro! Vou substituir as questões e opções conforme fornecido. Aqui está o
+código HTML e JavaScript atualizado: ```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulado DevOps</title>
+    <style>
+      .correct {
+        color: green;
+      }
+      .hidden {
+        display: none;
+      }
+      .wrong {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simulado DevOps</h1>
+    <div id="question-container">
+      <!-- Questões serão inseridas aqui pelo JavaScript -->
+    </div>
+    <button id="next-button" class="hidden">Próxima Questão</button>
+
+    <script>
+      const questions = [
+        {
+          question:
+            "A automação do processo em backup é uma abordagem que envolve a implementação de ferramentas e scripts automatizados para realizar operações de backup de forma consistente e eficiente. Algumas ferramentas em DevOps que podem ser utilizadas para gestão de backup são:",
+          options: [
+            "A) Oracle, MySQL, SQL Server e PostgreSQL",
+            "B) Veeam, Rubrik, Veritas NetBackup, AWS Backup e GitLab",
+            "C) PHP, Java, JavaScript e C",
+            "D) Canvas, Nagios, Trello e Asana",
+            "E) Dotcom-Monitor, Zabbix, SolarWinds e Dynatrace",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          question:
+            "Relacione corretamente as ferramentas de backup em DevOps: AWS Backup, GitLab, Amanda Backup, Azure Backup, Duplicity",
+          options: [
+            "A) 2 – 1 – 5 – 3 – 4",
+            "B) 1 – 4 – 5 – 3 – 2",
+            "C) 1 – 4 – 2 – 5 – 3",
+            "D) 4 – 3 – 2 – 5 – 1",
+            "E) 1 – 4 – 2 – 3 – 5",
+          ],
+          correctAnswer: 4,
+        },
+        {
+          question:
+            "As aplicações práticas do DevOps abrangem uma variedade de atividades e processos que visam melhorar a colaboração, eficiência e qualidade ao longo do ciclo de vida do desenvolvimento e operações de software. Entre essas aplicações práticas podemos citar:",
+          options: [
+            "A) Comunicação, agilidade, eficiência e cultura de colaboração",
+            "B) Orientação a objetos, estruturação e organização",
+            "C) Automação, colaboração e especificação",
+            "D) Tradição, influência e conservadorismo",
+            "E) Visão, individualismo e persistência",
+          ],
+          correctAnswer: 0,
+        },
+        {
+          question:
+            "Existe uma metodologia de desenvolvimento amplamente adotada nas empresas. Ela inicia seu processo com um planejamento detalhado, em que a coleta de requisitos é prioritária para se compreender as necessidades comerciais do software, seus recursos e funcionalidades. Essa metodologia de desenvolvimento é a:",
+          options: [
+            "A) Programação Orientada a Objetos",
+            "B) Extreme Programming (XP)",
+            "C) Programação estruturada",
+            "D) Desenvolvimento ágil",
+            "E) Programação Sequencial",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          question:
+            "Integração contínua (CI, do inglês Continuous Integration) no Git é a integração contínua de código usando o Git, um sistema de controle de versão distribuído. São corretas apenas as afirmativas:",
+          options: [
+            "A) I e II",
+            "B) II e V",
+            "C) I, II e IV",
+            "D) I, III e V",
+            "E) I, III e IV",
+          ],
+          correctAnswer: 4,
+        },
+        {
+          question:
+            "Na engenharia de software, Integração Contínua (CI) é um processo antigo, que trata da prática de mesclar todas as cópias de trabalho dos desenvolvedores em uma linha principal compartilhada, várias vezes ao dia. Relacione corretamente as ferramentas para Integração Contínua: Drone, Jenkins, TeamCity, GitLab CI/CD, GitHub Actions",
+          options: [
+            "A) 2 – 1 – 5 – 3 – 4",
+            "B) 2 – 4 – 5 – 3 – 1",
+            "C) 1 – 4 – 5 – 2 – 3",
+            "D) 4 – 3 – 2 – 5 – 1",
+            "E) 1 – 4 – 2 – 3 – 5",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          question:
+            "Nos primórdios da TI, um muro alto separava desenvolvimento e operações. Para tentar resolver esse problema, surgiu o(a):",
+          options: [
+            "A) Programação Orientada a objetos",
+            "B) Programação estruturada",
+            "C) Comunicação entre pares",
+            "D) Desenvolvimento ágil",
+            "E) Persistência de dados",
+          ],
+          correctAnswer: 3,
+        },
+        {
+          question:
+            "A cultura DevOps é fundamental para o sucesso da implementação de práticas e ferramentas associadas ao DevOps. Relacione corretamente os princípios que formam a cultura DevOps: Monitoramento contínuo, Gerenciamento de configuração, Entrega contínua (CD), Automação de infraestrutura, Integração contínua (CI)",
+          options: [
+            "A) 2 – 1 – 5 – 3 – 4",
+            "B) 1 – 4 – 2 – 3 – 5",
+            "C) 3 – 4 – 2 – 5 – 1",
+            "D) 4 – 3 – 5 – 2 – 1",
+            "E) 3 – 4 – 2 – 1 – 5",
+          ],
+          correctAnswer: 2,
+        },
+        {
+          question:
+            "Na engenharia de software, temos um processo que trata da prática de mesclar todas as cópias de trabalho dos desenvolvedores em uma linha principal compartilhada, várias vezes ao dia. Esse processo é conhecido como:",
+          options: [
+            "A) Integração Contínua (CI)",
+            "B) Desenvolvimento Unificado (DU)",
+            "C) Versionamento Centralizado (VU)",
+            "D) Entrega Contínua (CI)",
+            "E) Integração Centralizada (IC)",
+          ],
+          correctAnswer: 0,
+        },
+        {
+          question:
+            "DevOps e serviços de nuvem são duas áreas interconectadas que desempenham papéis cruciais na modernização e eficiência das operações de TI. Relacione corretamente algumas abordagens de nuvem que oferecem serviços e soluções para atender às diversas necessidades de empresas e desenvolvedores: IBM Cloud, Microsoft Azure, AWS, VMware Cloud, Google Cloud Platform",
+          options: [
+            "A) 2 – 4 – 5 – 3 – 1",
+            "B) 5 – 2 – 3 – 1 – 4",
+            "C) 2 – 4 – 1 – 3 – 5",
+            "D) 5 – 2 – 1 – 3 – 4",
+            "E) 2 – 4 – 3 – 5 – 1",
+          ],
+          correctAnswer: 1,
+        },
+        {
+          question:
+            "Containers Docker são ambientes de execução isolados que compartilham o kernel do sistema operacional do host, tornando-os mais leves e portáteis do que máquinas virtuais. Esse elemento que realiza a portabilidade dos containers Docker é o:",
+          options: [
+            "A) Docker Hub",
+            "B) Docker Engine",
+            "C) Containers Docker Server",
+            "D) Container Portable",
+            "E) Container Repository",
+          ],
+          correctAnswer: 1,
+        },
+      ];
+
+      let currentQuestionIndex = 0;
+
+      const questionContainer = document.getElementById("question-container");
+      const nextButton = document.getElementById("next-button");
+
+      function showQuestion(questionIndex) {
+        const questionData = questions[questionIndex];
+        questionContainer.innerHTML = `
+          <p>${questionData.question}</p>
+          ${questionData.options
+            .map(
+              (option, index) => `
+              <div>
+                  <input type="radio" name="option" id="option${index}" value="${index}">
+                  <label for="option${index}">${option}</label>
+              </div>
+          `
+            )
+            .join("")}
+          <button onclick="checkAnswer()">Responder</button>
+      `;
+      }
+
+      function checkAnswer() {
+        const selectedOption = document.querySelector(
+          'input[name="option"]:checked'
+        );
+        if (!selectedOption) {
+          alert("Por favor, selecione uma opção.");
+          return;
+        }
+
+        const selectedValue = parseInt(selectedOption.value);
+        const currentQuestion = questions[currentQuestionIndex];
+
+        currentQuestion.userAnswer = selectedValue;
+
+        if (selectedValue === currentQuestion.correctAnswer) {
+          alert("Você acertou!");
+        } else {
+          alert(
+            `Você errou! A resposta correta é: ${
+              currentQuestion.options[currentQuestion.correctAnswer]
+            }`
+          );
+          document
+            .querySelector(
+              `label[for="option${currentQuestion.correctAnswer}"]`
+            )
+            .classList.add("correct");
+        }
+
+        nextButton.classList.remove("hidden");
+      }
+
+      function nextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+          showQuestion(currentQuestionIndex);
+          nextButton.classList.add("hidden");
+        } else {
+          questionContainer.innerHTML = "<p>Você completou o simulado!</p>";
+          nextButton.classList.add("hidden");
+        }
+      }
+
+      nextButton.addEventListener("click", nextQuestion);
+
+      showQuestion(currentQuestionIndex);
+    </script>
+  </body>
+</html>
+``` Este código agora inclui todas as 10 questões do simulado. Cada questão será
+exibida uma de cada vez, e ao responder, se a resposta estiver incorreta, a
+resposta correta será destacada em verde. O botão "Próxima Questão" permite
+avançar para a próxima pergunta.
